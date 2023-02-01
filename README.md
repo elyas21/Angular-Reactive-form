@@ -1,9 +1,9 @@
 # Angular Reactive Form
 
-1 What is reactive form
-2 FormControl,FormGroup , Formbuilder
-3 Validotrs
-4 async validators 
+- What is reactive form
+- FormControl,FormGroup , Formbuilder
+- Validotrs
+- async validators 
 
     update value programmatically
     select element with object key and value
