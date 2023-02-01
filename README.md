@@ -7,3 +7,7 @@
 
     update value programaticaly
     select element with object key and value
+
+
+## Resource
+[Angular Doc]https://angular.io/guide/form-validation#custom-validators    
