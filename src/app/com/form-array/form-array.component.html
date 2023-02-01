@@ -1,0 +1,30 @@
+<div>
+
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+             
+                <div formArrayName="pets">
+                    <div *ngFor="let city of pets.controls; index as i">
+                        <input [formControlName]="i" placeholder="City">
+                    </div>
+                    <button (click)="addPet()">Add Pet</button>
+                  </div>
+                <button mat-raised-button color="primary" type="submit">Sbubmit </button>
+            </form>
+        </mat-card-content>
+        <button class="mybtn" mat-raised-button color="accent" (click)="ChangeTo()">CangeToMyValue</button>
+    </mat-card>
+</div>
+
+<button (click)="setPreset()">Set preset</button>
+`

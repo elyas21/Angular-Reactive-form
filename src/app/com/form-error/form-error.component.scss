@@ -1,0 +1,13 @@
+
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+form > *{
+    min-width: 500px;
+}
+.mybtn{
+    margin: 15px;
+    max-width:  130px;
+}

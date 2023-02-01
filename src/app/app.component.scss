@@ -1,0 +1,17 @@
+.nav-toolbar{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 125px);
+    grid-template-rows: minmax(22, 1fr);
+    place-content: center;
+    gap: 4px;
+    color: #b0bec5;
+}
+.nav-toolbar  a{
+  
+}
+
+main{
+    display: grid;
+    place-content: center;
+    padding: 5%;
+}

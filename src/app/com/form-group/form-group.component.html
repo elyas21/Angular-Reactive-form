@@ -1,0 +1,32 @@
+<div>
+
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
+
+                <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                  <mat-label>Last Name</mat-label>
+              <input matInput formControlName="firstName">
+            </mat-form-field>
+              <mat-form-field appearance="fill">
+                  <mat-label>Nationality</mat-label>
+                  <mat-select>
+                      <mat-option value="ET">First option</mat-option>
+                      <mat-option value="US">Second option</mat-option>
+                      <mat-option value="KN">Kenya</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                  <mat-label>Age</mat-label>
+                  <input matInput type="number" formControlName="age">
+                </mat-form-field>
+                <button mat-raised-button color="primary"  type="submit">Sbubmit </button>
+            </form>
+            </mat-card-content>
+            <button class="mybtn" mat-raised-button color="accent" (click)="ChangeTo()">CangeToMyValue</button>
+        </mat-card>
+</div>
