@@ -17,7 +17,8 @@ import { FormGroupComponent } from './com/form-group/form-group.component';
 import { FormArrayComponent } from './com/form-array/form-array.component';
 import { FormBuilderComponent } from './com/form-builder/form-builder.component';
 import { FormErrorComponent } from './com/form-error/form-error.component';
-import { FormValidatorComponent } from './com/form-validator/form-validator.component'
+import { FormValidatorComponent } from './com/form-validator/form-validator.component';
+import { FormAsyncValidatorComponent } from './com/form-async-validator/form-async-validator.component'
 
 const routers: Routes=[
   {
@@ -48,6 +49,10 @@ const routers: Routes=[
   {
     path: 'validator',
     component: FormValidatorComponent
+  },
+  {
+    path: 'async-validator',
+    component: FormAsyncValidatorComponent
   }
 ]
 @NgModule({
@@ -58,7 +63,8 @@ const routers: Routes=[
     FormArrayComponent,
     FormBuilderComponent,
     FormErrorComponent,
-    FormValidatorComponent
+    FormValidatorComponent,
+    FormAsyncValidatorComponent
   ],
   imports: [
     BrowserModule,

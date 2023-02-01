@@ -19,7 +19,7 @@
                     <input matInput type="password" formControlName="confPassword">
                 </mat-form-field>
 
-                <mat-error *ngIf="registerForm.errors?.['diff'] && (registerForm.touched || registerForm.dirty)"
+                <mat-error *ngIf="registerForm.errors?.['diff'] && (registerForm.controls['confPassword'].touched || registerForm.controls['confPassword'].dirty)"
                     class="cross-validation-error-message alert alert-danger">
                     Password Does't match </mat-error>
                 <button mat-raised-button color="primary" type="submit">Sbubmit </button>

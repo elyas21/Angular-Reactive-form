@@ -10,13 +10,13 @@
               </mat-form-field>
               <mat-form-field appearance="fill">
                   <mat-label>Last Name</mat-label>
-              <input matInput formControlName="firstName">
+              <input matInput formControlName="lastName">
             </mat-form-field>
               <mat-form-field appearance="fill">
                   <mat-label>Nationality</mat-label>
                   <mat-select>
-                      <mat-option value="ET">First option</mat-option>
-                      <mat-option value="US">Second option</mat-option>
+                      <mat-option value="ET">Ethiopia</mat-option>
+                      <mat-option value="US">United States</mat-option>
                       <mat-option value="KN">Kenya</mat-option>
                 </mat-select>
               </mat-form-field>
@@ -28,5 +28,6 @@
             </form>
             </mat-card-content>
             <button class="mybtn" mat-raised-button color="accent" (click)="ChangeTo()">CangeToMyValue</button>
+            <button class="mybtn" mat-raised-button color="accent" (click)="patchValue()">CangeAge&lastname</button>
         </mat-card>
 </div>

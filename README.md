@@ -3,9 +3,9 @@
 1 What is reactive form
 2 FormControl,FormGroup , Formbuilder
 3 Validotrs
-4 form properties
+4 async validators 
 
-    update value programaticaly
+    update value programmatically
     select element with object key and value
 
 

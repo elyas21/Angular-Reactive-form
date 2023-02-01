@@ -1,0 +1,9 @@
+<input type="text" [formControl]="alterEgoControl">
+
+<mat-error *ngIf="alterEgoControl.errors?.['uniqueAlterEgo'] && (alterEgoControl.touched || alterEgoControl.dirty)"
+    class="cross-validation-error-message alert alert-danger">
+    Password Does't match
+    
+</mat-error>
+
+<button color="primary" mat-button (click)="clickForm()">clickForm</button>

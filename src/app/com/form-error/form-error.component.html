@@ -22,7 +22,7 @@
                 <mat-error
                     *ngIf="profileForm.controls['lastName'].invalid && (profileForm.controls['lastName'].dirty || profileForm.controls['lastName'].touched)"
                     class="alert">
-                    <div *ngIf="profileForm.controls['lastName'].errors">
+                    <div *ngIf="profileForm.controls['lastName'].errors && profileForm.controls['lastName'].errors['required']">
                         Please enter lastName
                     </div>
                     <div *ngIf="profileForm.controls['lastName'].errors && profileForm.controls['lastName'].errors['forbiddenName']">

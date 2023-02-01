@@ -19,9 +19,12 @@ export class FormGroupComponent {
    console.log(this.contactForm);
   }
 
-ChangeTo(){
-    this.contactForm.setValue({age:'92',firstName:'Abebe',lastName:'Beso',nationality:'Ethiopia'})
+  ChangeTo(){
+    this.contactForm.setValue({age:'92',firstName:'Abebe',lastName:'Kebede',nationality:'ET'})
     this.contactForm.controls['age'].setValue('60');
     // patchValue
+  }
+  patchValue(){
+    this.contactForm.patchValue({age:'55',lastName:'patchName'})
   }
 }
