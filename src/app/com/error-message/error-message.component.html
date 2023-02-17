@@ -1,0 +1,53 @@
+<!-- <div>
+
+    <mat-card>
+        
+        <mat-error
+        *ngIf="contactForm.controls['lastName'].invalid && (contactForm.controls['lastName'].dirty || contactForm.controls['lastName'].touched)"
+        class="alert">
+
+    </mat-error>
+        <mat-card-content>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
+
+                <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                  <mat-label>Last Name</mat-label>
+              <input matInput formControlName="lastName">
+            </mat-form-field>
+              <mat-form-field appearance="fill">
+                  <mat-label>Nationality</mat-label>
+                  <mat-select>
+                      <mat-option value="ET">Ethiopia</mat-option>
+                      <mat-option value="US">United States</mat-option>
+                      <mat-option value="KN">Kenya</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                  <mat-label>Age</mat-label>
+                  <input matInput type="number" formControlName="age">
+                </mat-form-field>
+                <button mat-raised-button color="primary"  type="submit">Sbubmit </button>
+            </form>
+            </mat-card-content>
+            <button class="mybtn" mat-raised-button color="accent" (click)="ChangeTo()">CangeToMyValue</button>
+            <button class="mybtn" mat-raised-button color="accent" (click)="patchValue()">CangeAge&lastname</button>
+        </mat-card>
+</div>
+<mat-error
+*ngIf="contactForm.controls['lastName'].invalid && (contactForm.controls['lastName'].dirty || contactForm.controls['lastName'].touched)"
+class="alert">
+<div *ngIf="contactForm.controls['lastName'].errors && contactForm.controls['lastName'].errors['required']">
+    Please enter lastName
+</div>
+<div *ngIf="contactForm.controls['lastName'].errors && contactForm.controls['lastName'].errors['forbiddenName']">
+    It contain bad word
+</div>
+</mat-error> -->
+
+<h3 class="first">Single</h3>
+<p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
+<!-- <p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p> -->

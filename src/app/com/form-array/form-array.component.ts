@@ -11,7 +11,7 @@ export class FormArrayComponent {
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     pets: new FormArray([
-      new FormControl('Dog')
+      new FormControl('')
     ])
     
   })

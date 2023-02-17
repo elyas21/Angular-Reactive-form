@@ -12,13 +12,19 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { AppComponent } from './app.component';
 import { BasicComponent } from './com/basic/basic.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroupComponent } from './com/form-group/form-group.component';
 import { FormArrayComponent } from './com/form-array/form-array.component';
 import { FormBuilderComponent } from './com/form-builder/form-builder.component';
 import { FormErrorComponent } from './com/form-error/form-error.component';
 import { FormValidatorComponent } from './com/form-validator/form-validator.component';
 import { FormAsyncValidatorComponent } from './com/form-async-validator/form-async-validator.component'
+import { ErrorMessageComponent } from './com/error-message/error-message.component';
+import { DropdownModule } from 'primeng/dropdown';
+import { TestcomComponent } from './testcom/testcom.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 const routers: Routes=[
   {
@@ -53,6 +59,10 @@ const routers: Routes=[
   {
     path: 'async-validator',
     component: FormAsyncValidatorComponent
+  },
+  {
+    path: 'error-message',
+    component: ErrorMessageComponent
   }
 ]
 @NgModule({
@@ -64,7 +74,9 @@ const routers: Routes=[
     FormBuilderComponent,
     FormErrorComponent,
     FormValidatorComponent,
-    FormAsyncValidatorComponent
+    FormAsyncValidatorComponent,
+    ErrorMessageComponent,
+    TestcomComponent
   ],
   imports: [
     BrowserModule,
@@ -77,8 +89,14 @@ const routers: Routes=[
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatCardModule,
+    FormsModule,
+  // DropdownModule ,
+     MatCardModule,
     MatSelectModule,
+    DropdownModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
     
   ],
   providers: [],

@@ -8,10 +8,13 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn,
 })
 export class FormValidatorComponent {
   registerForm = new FormGroup({
-    'name': new FormControl(),
+    'name': new FormControl('',[Validators.required , ]),
     'password': new FormControl('',[Validators.required]),
     'confPassword': new FormControl()
-  },{ validators: passwordMatchValidator });
+  },
+  { validators: passwordMatchValidator }
+  
+  );
   onSubmit(){
     console.log(this.registerForm.value);
     
@@ -22,6 +25,6 @@ export const passwordMatchValidator: ValidatorFn = (control: AbstractControl): V
   const password:string = control.get('password')?.value;
   const confPassword = control.get('confPassword')?.value;
 if(password && confPassword)
-return password.toLowerCase() != confPassword.toLowerCase() ? { diff: true } : null;
+return password != confPassword ? { diff: true } : null;
 else return {diff: true}
 };
