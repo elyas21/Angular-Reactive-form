@@ -1,0 +1,16 @@
+.form-grid{
+    display: flex;
+    flex-direction: column;
+}
+.form-nest{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(97, 97, 92);
+}
+.address-form{
+    margin: 1.2rem 6rem;
+    padding: 2rem 2rem;
+
+}

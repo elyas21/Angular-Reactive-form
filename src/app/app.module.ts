@@ -25,6 +25,8 @@ import { TestcomComponent } from './testcom/testcom.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { NestFormGroupComponent } from './com/nest-form-group/nest-form-group.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routers: Routes=[
   {
@@ -61,6 +63,10 @@ const routers: Routes=[
     component: FormAsyncValidatorComponent
   },
   {
+    path: 'nest-form-group',
+    component: NestFormGroupComponent
+  },
+  {
     path: 'error-message',
     component: ErrorMessageComponent
   }
@@ -76,7 +82,8 @@ const routers: Routes=[
     FormValidatorComponent,
     FormAsyncValidatorComponent,
     ErrorMessageComponent,
-    TestcomComponent
+    TestcomComponent,
+    NestFormGroupComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +103,8 @@ const routers: Routes=[
     DropdownModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    NgbModule
     
   ],
   providers: [],

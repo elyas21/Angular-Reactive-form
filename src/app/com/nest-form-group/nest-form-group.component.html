@@ -1,0 +1,67 @@
+<div>
+  <mat-card>
+    <mat-card-content>
+      <form  class="form-grid" [formGroup]="userForm" (ngSubmit)="onSave()">
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+        <mat-card class="address-form" formGroupName="address">
+          <h3>Address Form</h3>
+          <div class="form-nest" >
+
+            <mat-form-field appearance="fill">
+              <mat-label>Country</mat-label>
+              <mat-select>
+                <mat-option value="ET">Ethiopia</mat-option>
+                <mat-option value="US">United States</mat-option>
+                <mat-option value="KN">Kenya</mat-option>
+              </mat-select>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>City</mat-label>
+              <input matInput formControlName="city" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Zip Code</mat-label>
+              <input matInput formControlName="zip" />
+            </mat-form-field>
+          </div>
+        </mat-card>
+        <mat-card class="address-form" formGroupName="addressTwo">
+          <h3>Address Two orm</h3>
+          <div class="form-nest" >
+
+            <mat-form-field appearance="fill">
+              <mat-label>Country</mat-label>
+              <mat-select>
+                <mat-option value="ET">Ethiopia</mat-option>
+                <mat-option value="US">United States</mat-option>
+                <mat-option value="KN">Kenya</mat-option>
+              </mat-select>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>City</mat-label>
+              <input matInput formControlName="city" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Zip Code</mat-label>
+              <input matInput formControlName="zip" />
+            </mat-form-field>
+          </div>
+        </mat-card>
+        <button mat-raised-button color="primary" type="submit">Sbubmit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
