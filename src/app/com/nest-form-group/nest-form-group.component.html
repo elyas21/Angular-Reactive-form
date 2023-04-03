@@ -1,7 +1,7 @@
 <div>
   <mat-card>
     <mat-card-content>
-      <form  class="form-grid" [formGroup]="userForm" (ngSubmit)="onSave()">
+      <form class="form-grid" [formGroup]="userForm" (ngSubmit)="onSave()">
         <mat-form-field appearance="fill">
           <mat-label>First Name</mat-label>
           <input matInput formControlName="firstName" />
@@ -16,8 +16,7 @@
         </mat-form-field>
         <mat-card class="address-form" formGroupName="address">
           <h3>Address Form</h3>
-          <div class="form-nest" >
-
+          <div class="form-nest">
             <mat-form-field appearance="fill">
               <mat-label>Country</mat-label>
               <mat-select>
@@ -26,7 +25,7 @@
                 <mat-option value="KN">Kenya</mat-option>
               </mat-select>
             </mat-form-field>
-  
+
             <mat-form-field appearance="fill">
               <mat-label>City</mat-label>
               <input matInput formControlName="city" />
@@ -39,8 +38,7 @@
         </mat-card>
         <mat-card class="address-form" formGroupName="addressTwo">
           <h3>Address Two orm</h3>
-          <div class="form-nest" >
-
+          <div class="form-nest">
             <mat-form-field appearance="fill">
               <mat-label>Country</mat-label>
               <mat-select>
@@ -49,7 +47,7 @@
                 <mat-option value="KN">Kenya</mat-option>
               </mat-select>
             </mat-form-field>
-  
+
             <mat-form-field appearance="fill">
               <mat-label>City</mat-label>
               <input matInput formControlName="city" />
@@ -60,6 +58,49 @@
             </mat-form-field>
           </div>
         </mat-card>
+        <mat-card class="address-form" formGroupName="closeRelatives">
+          <h3>closeRelatives</h3>
+          <div class="form-nest"></div>
+          <div formArrayName="familyMembers">
+            <div
+              *ngFor="
+                let city of closeRelatives('familyMembers').controls;
+                index as i
+              "
+              
+            >
+              <mat-form-field appearance="fill">
+                <mat-label>Family Member</mat-label>
+                <input matInput formControlName={{i}} />
+              </mat-form-field>
+            </div>
+            <button (click)="addFamilyMembers()">Add Family Member</button>
+          </div>
+        </mat-card>
+        <mat-card class="address-form" formGroupName="closeRelatives">
+          <h3>friends</h3>
+          <div class="form-nest"></div>
+          <div formArrayName="friends">
+            <div
+              *ngFor="
+                let city of closeRelatives('friends').controls;
+                let i = index
+              "
+              [formGroupName]="i"
+            >
+              <mat-form-field appearance="fill">
+                <mat-label>Friend Name</mat-label>
+                <input matInput formControlName="name" />
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Friend Rank</mat-label>
+                <input matInput formControlName="rank" />
+              </mat-form-field>
+            </div>
+            <button (click)="addFriends()">Add friends</button>
+          </div>
+        </mat-card>
+
         <button mat-raised-button color="primary" type="submit">Sbubmit</button>
       </form>
     </mat-card-content>
