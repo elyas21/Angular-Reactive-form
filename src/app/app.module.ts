@@ -12,7 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { AppComponent } from './app.component';
 import { BasicComponent } from './com/basic/basic.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NG_ASYNC_VALIDATORS, ReactiveFormsModule } from '@angular/forms';
 import { FormGroupComponent } from './com/form-group/form-group.component';
 import { FormArrayComponent } from './com/form-array/form-array.component';
 import { FormBuilderComponent } from './com/form-builder/form-builder.component';
@@ -108,7 +108,8 @@ const routers: Routes=[
     NgbModule
     
   ],
-  providers: [IsUserNameTaken],
+  providers: [{provide: NG_ASYNC_VALIDATORS, useExisting: IsUserNameTaken, multi:
+    true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
