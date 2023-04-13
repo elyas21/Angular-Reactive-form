@@ -27,6 +27,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NestFormGroupComponent } from './com/nest-form-group/nest-form-group.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IsUserNameTaken } from './validator/asyncValidatorService';
 
 const routers: Routes=[
   {
@@ -107,7 +108,7 @@ const routers: Routes=[
     NgbModule
     
   ],
-  providers: [],
+  providers: [IsUserNameTaken],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
