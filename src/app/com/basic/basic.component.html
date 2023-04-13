@@ -1,23 +1,21 @@
 <div class="wrapper">
-    <div>
+  <div>
     <label for="age">Age</label>
-    <input type="number" name="age" [formControl]="age" id="">
+    <input type="number" name="age" [formControl]="age" id="" />
+  </div>
 
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Input</mat-label>
+        <input matInput placeholder="AGE" [formControl]="name" />
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+      {{ name.value }}
+    </mat-card-content>
+  </mat-card>
 </div>
-
-    <mat-card>
-
-
-        <mat-card-content>
-            <mat-form-field appearance="outline">
-                <mat-label>Input</mat-label>
-                <input matInput placeholder="AGE" [formControl]="name">
-                <mat-hint>Hint</mat-hint>
-            </mat-form-field>
-            {{name.value}}
-        </mat-card-content>
-
-    </mat-card>
-
-
-</div>
+<ngx-stackblitz-editor
+  height="400"
+  repo="elyas21/angular-Reactive-form"
+></ngx-stackblitz-editor>

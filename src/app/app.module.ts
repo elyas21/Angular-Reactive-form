@@ -27,6 +27,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NestFormGroupComponent } from './com/nest-form-group/nest-form-group.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxStackblitzModule } from 'ngx-stackblitz';
 
 const routers: Routes=[
   {
@@ -83,7 +84,8 @@ const routers: Routes=[
     FormAsyncValidatorComponent,
     ErrorMessageComponent,
     TestcomComponent,
-    NestFormGroupComponent
+    NestFormGroupComponent,
+    NgxStackblitzModule
   ],
   imports: [
     BrowserModule,
