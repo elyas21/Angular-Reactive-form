@@ -15,7 +15,7 @@
              
                 <div formArrayName="pets">
                     <div *ngFor="let city of pets.controls; index as i">
-                        <input [formControlName]="i" placeholder="City">
+                        <input [formControlName]="i" placeholder="Pet name">
                     </div>
                     <button (click)="addPet()">Add Pet</button>
                   </div>
