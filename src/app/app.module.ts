@@ -28,6 +28,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { NestFormGroupComponent } from './com/nest-form-group/nest-form-group.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IsUserNameTaken } from './validator/asyncValidatorService';
+import { TwoDigitDecimaNumberDirective } from './com/basic/two-digit-decimal-number';
 
 const routers: Routes=[
   {
@@ -84,7 +85,8 @@ const routers: Routes=[
     FormAsyncValidatorComponent,
     ErrorMessageComponent,
     TestcomComponent,
-    NestFormGroupComponent
+    NestFormGroupComponent,
+    TwoDigitDecimaNumberDirective
   ],
   imports: [
     BrowserModule,

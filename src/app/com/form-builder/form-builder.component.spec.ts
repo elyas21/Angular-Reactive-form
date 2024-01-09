@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilderComponent } from './form-builder.component';
+import { MatCardModule } from '@angular/material/card';
 
-import FormBuilderComponent from './form-builder.component';
+// import FormBuilderComponent from './form-builder.component';
 
 describe('FormBuilderComponent', () => {
   let component: FormBuilderComponent;
@@ -8,7 +10,8 @@ describe('FormBuilderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormBuilderComponent ]
+      declarations: [ FormBuilderComponent ],
+      imports: [MatCardModule]
     })
     .compileComponents();
 
